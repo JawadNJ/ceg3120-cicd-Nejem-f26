@@ -4,4 +4,8 @@
 
 ## Creating the webiste Directory 
 
-I created a folder named web-content to organize the files for my website. it will contain the HTML pages and CSS stylesheet. thses files will later be copied in the docker container. 
+- I created a folder named web-content to organize the files for my website. it will contain the HTML pages and CSS stylesheet. thses files will later be copied in the docker container. 
+
+### the about page 
+
+- the about.html page provides additional information about the purpose of the website and the technology topics it covers. i made navigation links so visitors can move betweeen the homepage and the about page.
