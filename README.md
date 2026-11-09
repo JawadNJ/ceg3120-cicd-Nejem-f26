@@ -9,3 +9,7 @@
 ### the about page 
 
 - the about.html page provides additional information about the purpose of the website and the technology topics it covers. i made navigation links so visitors can move betweeen the homepage and the about page.
+
+## Creating the Dockerfile 
+
+The Dockerfile tells Docker how to build an image containing your website and an apache web server. apache will serve the HTML and CSS files when someone accesses the containe. 
