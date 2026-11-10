@@ -30,5 +30,9 @@ latest: Identifies this as the latest build.\
 
 - I created a public repository named tech-hub on Docker Hub. This repository will store the Docker image for my website so it can be accessed online. It will also be used later by GitHub Actions to automatically publish updated Docker images when changes are pushed to GitHub.
 
+## Authenticating with Docker Hub
+
+- I generated a Docker Hub Personal Access Token (PAT) with Read and Write permissions. I used this token to authenticate Docker from my local terminal with the docker login command. A personal access token provides a more secure way to authenticate without using my regular account password. The token was kept private and was not added to the project repository.
+
 
 
