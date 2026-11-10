@@ -26,6 +26,9 @@ tech-hub: our image name.\
 latest: Identifies this as the latest build.\
 .: uses the current directory as the build context, where docker find the dockerfile and website folder.
 
+## Creating a Docker Hub Repository
+
+- I created a public repository named tech-hub on Docker Hub. This repository will store the Docker image for my website so it can be accessed online. It will also be used later by GitHub Actions to automatically publish updated Docker images when changes are pushed to GitHub.
 
 
 
