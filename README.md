@@ -12,4 +12,18 @@
 
 ## Creating the Dockerfile 
 
-The Dockerfile tells Docker how to build an image containing your website and an apache web server. apache will serve the HTML and CSS files when someone accesses the containe. 
+- The Dockerfile tells Docker how to build an image containing your website and an apache web server. apache will serve the HTML and CSS files when someone accesses the containe. 
+
+## Verifying Docker Installation 
+
+- I checked that docker is installed, then I used docker info to verify that the doker engine was running. I ran docker run hello world as a test and it worked good! 
+
+Command | Purpose | 
+
+docker build: tells Docker to build an image.
+-t: gives the image a name and tag.
+tech-hub: our image name. 
+latest: Identifies this as the latest build. 
+.: uses the current directory as the build context, where docker find the dockerfile and website folder. 
+
+
