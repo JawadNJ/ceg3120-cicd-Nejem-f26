@@ -20,11 +20,11 @@
 
 Command | Purpose | 
 
-docker build: tells Docker to build an image.
--t: gives the image a name and tag.
-tech-hub: our image name. 
-latest: Identifies this as the latest build. 
-.: uses the current directory as the build context, where docker find the dockerfile and website folder. 
+docker build: tells Docker to build an image.\
+-t: gives the image a name and tag.\
+tech-hub: our image name.\ 
+latest: Identifies this as the latest build.\ 
+.: uses the current directory as the build context, where docker find the dockerfile and website folder.\ 
 
 
 
