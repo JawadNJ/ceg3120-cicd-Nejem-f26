@@ -50,3 +50,8 @@ latest: Identifies this as the latest build.\
 
 - I created the .github/workflow directory in my repo. github actions uses this directory to locate workflow configuration files. I also created docker-publish.yml, which will contain the instructions for automatically building and publishing my Docker image.
 
+## Creating the Docker Workflow 
+
+- I created the github workflow. this workflow automaticlly builds and publishess my Docker image to Docker Hub whenever I push changes to the main branch. 
+The workflow first checks out my repository, logs in to Docker Hub using the GitHub repository secrets, sets up Docker Buildx, and then builds and pushes the tech-hub image.
+
