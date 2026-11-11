@@ -46,3 +46,7 @@ latest: Identifies this as the latest build.\
 
 - the goal of part 2 is to automate what I did manually. instead of running docker build and docker push everytime i update the website. 
 
+## Creating the Github actions workflow directory
+
+- I created the .github/workflow directory in my repo. github actions uses this directory to locate workflow configuration files. I also created docker-publish.yml, which will contain the instructions for automatically building and publishing my Docker image.
+
