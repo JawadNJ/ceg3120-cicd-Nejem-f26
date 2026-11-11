@@ -10,3 +10,11 @@
 ## Docker hub image after pushing
 <img width="1477" height="687" alt="image" src="https://github.com/user-attachments/assets/8de54d62-99d8-4fdb-8335-cd4722257ef3" />
 
+## the GitHub action running successfully
+<img width="1500" height="950" alt="image" src="https://github.com/user-attachments/assets/f7a3662f-0d2b-40b9-aba0-4414cee0e8b2" />
+
+## tech-hub showing the latest tag 
+<img width="835" height="380" alt="image" src="https://github.com/user-attachments/assets/c3b7b259-6548-4451-b18e-5494422174f8" />
+
+
+
