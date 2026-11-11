@@ -7,6 +7,6 @@
 ## showing docker PS image running 
 <img width="1362" height="95" alt="image" src="https://github.com/user-attachments/assets/33d2ac03-92e4-41e3-bd52-400fe891a0a6" />
 
-## Docker hub image 
+## Docker hub image after pushing
 <img width="1477" height="687" alt="image" src="https://github.com/user-attachments/assets/8de54d62-99d8-4fdb-8335-cd4722257ef3" />
 
