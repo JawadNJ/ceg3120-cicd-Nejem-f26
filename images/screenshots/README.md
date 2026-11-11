@@ -16,5 +16,9 @@
 ## tech-hub showing the latest tag 
 <img width="835" height="380" alt="image" src="https://github.com/user-attachments/assets/c3b7b259-6548-4451-b18e-5494422174f8" />
 
+## showing the repo Secrets and putting them in the secrets box 
+<img width="623" height="245" alt="image" src="https://github.com/user-attachments/assets/d173f9b3-e5c8-426d-a3d3-1901965b57e5" />
+
+
 
 
