@@ -19,6 +19,12 @@
 ## showing the repo Secrets and putting them in the secrets box 
 <img width="623" height="245" alt="image" src="https://github.com/user-attachments/assets/d173f9b3-e5c8-426d-a3d3-1901965b57e5" />
 
+## screenshots of the tags showing in dockerhub 
+<img width="1497" height="926" alt="image" src="https://github.com/user-attachments/assets/17223566-78f5-4863-877c-81161b6309c5" />
+<img width="1477" height="300" alt="image" src="https://github.com/user-attachments/assets/8cc02887-b087-4312-aa0b-b36d792dc5ac" />
+
+
+
 
 
 
