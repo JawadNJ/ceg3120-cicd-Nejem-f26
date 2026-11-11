@@ -58,3 +58,6 @@ The workflow first checks out my repository, logs in to Docker Hub using the Git
 ## Testing the Github Actions Workflow 
 
 - I tested the Github actions workflow after adding it to my docker hub, the workflow works and it was completed successfully, shown by the green checkmark, and also verified that the docker image was published to docker also with the latest tag showing, This confirms that my CI/CD workflow can automatically build and publish my Docker image when changes are pushed to the main branch.
+
+# Part 3 - Understanding Semantic Versioning 
+
