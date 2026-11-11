@@ -55,3 +55,6 @@ latest: Identifies this as the latest build.\
 - I created the github workflow. this workflow automaticlly builds and publishess my Docker image to Docker Hub whenever I push changes to the main branch. 
 The workflow first checks out my repository, logs in to Docker Hub using the GitHub repository secrets, sets up Docker Buildx, and then builds and pushes the tech-hub image.
 
+## Testing the Github Actions Workflow 
+
+- I tested the Github actions workflow after adding it to my docker hub, the workflow works and it was completed successfully, shown by the green checkmark, and also verified that the docker image was published to docker also with the latest tag showing, This confirms that my CI/CD workflow can automatically build and publish my Docker image when changes are pushed to the main branch.
