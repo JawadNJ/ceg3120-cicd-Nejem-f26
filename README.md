@@ -34,5 +34,11 @@ latest: Identifies this as the latest build.\
 
 - I generated a Docker Hub Personal Access Token (PAT) with Read and Write permissions. I used this token to authenticate Docker from my local terminal with the docker login command. A personal access token provides a more secure way to authenticate without using my regular account password. The token was kept private and was not added to the project repository.
 
+## tagging the Docker image 
 
+- I used the docker tag command to assign my local Docker image a name that matches my Docker Hub username and repo. this allows Docker to identify which online repository should recceive the image when I pish it. 
+
+## Pushing the docker image to docker hub 
+
+- I used the docker push command to upload my tagged image to the public docker hub repo, it makes the image online so it can be downloaded, i verified the upload by visiting the docker hub repo. 
 
