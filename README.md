@@ -42,3 +42,7 @@ latest: Identifies this as the latest build.\
 
 - I used the docker push command to upload my tagged image to the public docker hub repo, it makes the image online so it can be downloaded, i verified the upload by visiting the docker hub repo. 
 
+# Part 2 - github actions and docker hub
+
+- the goal of part 2 is to automate what I did manually. instead of running docker build and docker push everytime i update the website. 
+
