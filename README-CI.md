@@ -20,45 +20,7 @@ This process makes it possible to maintain multiple versions of my website and u
 
 ## Continuous Integration Process Diagram
 
-The following diagram shows how a change to my website becomes a new Docker image available on Docker Hub.
 
-```mermaid
-flowchart TD
-    subgraph LOCAL["Local Cloned Repository"]
-        A["Developer edits website files"]
-        B["Save changes and commit using Git"]
-        C["Push code changes to GitHub"]
-        D["Create semantic version tag<br/>Example: v1.1.0"]
-        E["Push version tag to GitHub"]
-        A --> B --> C --> D --> E
-    end
-
-    subgraph GITHUB["GitHub Repository"]
-        F["GitHub receives version tag"]
-        G["GitHub Actions workflow starts"]
-        H["Check out repository"]
-        I["Log in to Docker Hub using repository secrets"]
-        J["Set up Docker Buildx"]
-        K["Generate image tags using Docker Metadata Action"]
-        L["Build and push Docker image"]
-        F --> G --> H --> I --> J --> K --> L
-    end
-
-    subgraph HUB["Docker Hub"]
-        M["tech-hub image repository"]
-        N["latest"]
-        O["1"]
-        P["1.1"]
-        M --> N
-        M --> O
-        M --> P
-    end
-
-    E --> F
-    L --> M
-
-    C -.->|"Code push alone does not trigger workflow"| F
-```
 
 ## Project Status
 
