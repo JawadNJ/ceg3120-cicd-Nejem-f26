@@ -1,3 +1,74 @@
+
+# Continuous Integration Project Overview
+
+## Project Goal
+
+The goal of this project is to create an automated Continuous Integration (CI) process that builds and publishes Docker container images to Docker Hub. When I make changes to my website, commit the changes, and push a new semantic version tag to GitHub, GitHub Actions automatically builds a new Docker image and publishes it to my Docker Hub repository.
+
+This process makes it possible to maintain multiple versions of my website and use an older version if I need to roll back.
+
+## Tools Used
+
+- **Visual Studio Code:** Used to edit the website files, Dockerfile, GitHub Actions workflow, and project documentation.
+- **Git:** Used for version control, saving changes, creating commits, and creating semantic version tags.
+- **GitHub:** Stores my project repository and triggers GitHub Actions when I push a version tag.
+- **GitHub Actions:** Automates the process of building and publishing Docker images.
+- **Docker:** Used to build container images and run the website in containers.
+- **Docker Hub:** Stores the published Docker images and their different version tags.
+- **Docker Metadata Action:** Generates image tags such as `latest`, `1`, and `1.1`.
+- **Docker Buildx:** Provides the build environment used by the GitHub Actions workflow.
+
+## Continuous Integration Process Diagram
+
+The following diagram shows how a change to my website becomes a new Docker image available on Docker Hub.
+
+```mermaid
+flowchart TD
+    subgraph LOCAL["Local Cloned Repository"]
+        A["Developer edits website files"]
+        B["Save changes and commit using Git"]
+        C["Push code changes to GitHub"]
+        D["Create semantic version tag<br/>Example: v1.1.0"]
+        E["Push version tag to GitHub"]
+        A --> B --> C --> D --> E
+    end
+
+    subgraph GITHUB["GitHub Repository"]
+        F["GitHub receives version tag"]
+        G["GitHub Actions workflow starts"]
+        H["Check out repository"]
+        I["Log in to Docker Hub using repository secrets"]
+        J["Set up Docker Buildx"]
+        K["Generate image tags using Docker Metadata Action"]
+        L["Build and push Docker image"]
+        F --> G --> H --> I --> J --> K --> L
+    end
+
+    subgraph HUB["Docker Hub"]
+        M["tech-hub image repository"]
+        N["latest"]
+        O["1"]
+        P["1.1"]
+        M --> N
+        M --> O
+        M --> P
+    end
+
+    E --> F
+    L --> M
+
+    C -.->|"Code push alone does not trigger workflow"| F
+```
+
+## Project Status
+
+The project is working as expected. I successfully published two versions of my website using Git tags:
+
+- `v1.0.0`: Original Tech Hub website.
+- `v1.1.0`: Updated Tech Hub website with a new release banner.
+
+I verified that both versions can be downloaded from Docker Hub and run in separate containers. The older version remains available for rollback.
+
 # Project 6 – Continuous Integration and Semantic Versioning
 
 ## 1. Generating Git Tags
