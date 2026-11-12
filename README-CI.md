@@ -188,3 +188,27 @@ The following screenshots are saved in the `images/screenshots/` directory:
 - `github-version-1.1.png` – Successful GitHub Actions workflow for version 1.1.0.
 
 These screenshots provide evidence that the workflow successfully builds, publishes, and maintains multiple versions of my Docker image.
+
+# Resources
+
+The following resources helped me complete this project:
+
+- GitHub Actions Documentation: Used to understand how GitHub Actions workflows are configured and executed.
+
+- Docker Metadata Action: Used to generate semantic version tags for Docker images.
+
+- Docker Manage Tags and Labels: Used to understand how to build and publish Docker images with multiple tags.
+
+- Semantic Versioning: Used to understand major, minor, and patch version numbers.
+
+## Generative AI Assistance
+
+I used OpenAI ChatGPT to help understand the project requirements and complete the implementation.
+
+Some of the prompts I used included:
+
+- "Explain what each section of the GitHub Actions YAML file does."
+- "Help me troubleshoot the Docker username and password required error."
+- "Explain how to use Git tags for semantic versioning."
+
+ChatGPT was used for explanations, troubleshooting, workflow guidance, and documentation assistance. I performed the project setup, ran the commands, tested the Docker containers, and verified the published images myself.
