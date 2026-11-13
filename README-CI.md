@@ -52,7 +52,7 @@ flowchart LR
     C --> D
     I --> J
 
-    N["Important: A regular code push does not start this workflow.<br/>Only pushing a version tag such as v1.1.0 starts the publishing process."]
+    N["A regular code push does not start this workflow.<br/>Only pushing a version tag such as v1.1.0 starts the publishing process."]
     B -.-> N
 
     classDef local fill:#E8F1FF,stroke:#3973C6,color:#17365D,stroke-width:1.5px
