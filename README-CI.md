@@ -24,7 +24,7 @@ This diagram shows the steps I follow to update my website and publish a new Doc
 
 ```mermaid
 flowchart TD
-    A["Developer makes changes<br/>to website files"]
+    A["making changes<br/>to website files"]
     B["Commit and push changes<br/>to GitHub"]
     C["Create a version tag<br/>Example: v1.1.0"]
     D["Push tag to GitHub"]
