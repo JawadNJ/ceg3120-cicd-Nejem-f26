@@ -20,54 +20,42 @@ This process makes it possible to maintain multiple versions of my website and u
 
 ## Continuous Integration Process Diagram
 
-The diagram below shows how I make changes to my website, create a version tag, and use GitHub Actions to automatically build and publish a Docker image to Docker Hub.
+This diagram shows the steps I follow to update my website and publish a new Docker image using GitHub Actions.
 
 ```mermaid
-flowchart LR
-    subgraph DEV["1. LOCAL COMPUTER"]
-        A["Edit website files<br/>HTML / CSS"]
-        B["Commit and push<br/>code to GitHub"]
-        C["Create and push<br/>version tag<br/>v1.1.0"]
-        A --> B --> C
-    end
+flowchart TD
+    A["Developer makes changes<br/>to website files"]
+    B["Commit and push changes<br/>to GitHub"]
+    C["Create a version tag<br/>Example: v1.1.0"]
+    D["Push tag to GitHub"]
+    E["GitHub Actions workflow starts"]
+    F["Check out project files"]
+    G["Log in to Docker Hub"]
+    H["Generate Docker image tags"]
+    I["Build the Docker image"]
+    J["Push image to Docker Hub"]
+    K["Image available in tech-hub repository"]
 
-    subgraph GH["2. GITHUB ACTIONS"]
-        D["GitHub receives<br/>version tag"]
-        E["Workflow starts<br/>on tag push"]
-        F["Check out<br/>repository"]
-        G["Log in to Docker Hub<br/>using GitHub Secrets"]
-        H["Set up Docker Buildx<br/>and generate tags"]
-        I["Build Docker image<br/>and push to Docker Hub"]
-        D --> E --> F --> G --> H --> I
-    end
+    A --> B --> C --> D --> E
+    E --> F --> G --> H --> I --> J --> K
 
-    subgraph DH["3. DOCKER HUB"]
-        J["tech-hub<br/>Container Image Repository"]
-        K["Published image tags<br/><br/>latest<br/>1<br/>1.1"]
-        L["Previous version retained<br/>1.0<br/><br/>Available for rollback"]
-        J --> K
-        J --> L
-    end
+    K --> L["latest"]
+    K --> M["1"]
+    K --> N["1.1"]
 
-    C --> D
-    I --> J
+    O["Older version 1.0 stays available<br/>for rollback"]
 
-    N["A regular code push does not start this workflow.<br/>Only pushing a version tag such as v1.1.0 starts the publishing process."]
-    B -.-> N
+    K --> O
 
-    classDef local fill:#E8F1FF,stroke:#3973C6,color:#17365D,stroke-width:1.5px
-    classDef github fill:#F0EAFE,stroke:#7954B8,color:#39245F,stroke-width:1.5px
-    classDef docker fill:#E5F6F3,stroke:#238777,color:#124D45,stroke-width:1.5px
-    classDef note fill:#FFF5DB,stroke:#D49A27,color:#684B12,stroke-width:1.5px
+    B -. "A regular code push does not<br/>trigger this workflow" .-> P["Workflow only runs<br/>when a version tag is pushed"]
 
-    class A,B,C local
-    class D,E,F,G,H,I github
-    class J,K,L docker
-    class N note
+    classDef process fill:#eef3f8,stroke:#536b82,color:#172b3a
+    classDef result fill:#e8f2eb,stroke:#527b5c,color:#183c23
+    classDef note fill:#fff5df,stroke:#a88743,color:#59451d
 
-    style DEV fill:#F7FAFF,stroke:#3973C6,stroke-width:2px
-    style GH fill:#FAF8FF,stroke:#7954B8,stroke-width:2px
-    style DH fill:#F5FCFA,stroke:#238777,stroke-width:2px
+    class A,B,C,D,E,F,G,H,I,J process
+    class K,L,M,N result
+    class O,P note
 ```
 
 ## Project Status
